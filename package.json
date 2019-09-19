@@ -62,7 +62,6 @@
     "jquery": "^3.4.1",
     "jquery-mask-plugin": "^1.14.16",
     "jquery-touchswipe": "^1.6.19",
-    "owl.carousel": "^2.3.4",
     "popper.js": "^1.15.0"
   }
 }

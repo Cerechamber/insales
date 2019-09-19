@@ -92,7 +92,15 @@ $('.hide-menu').on('mouseleave', function() {
 
 });
 
+$('.car-arr-left').click(function(){
+  $('.carousel-control-prev-icon').click();
 
+});
+
+$('.car-arr-right').click(function(){
+  $('.carousel-control-next-icon').click();
+
+});
 
 
 

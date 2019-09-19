@@ -227,6 +227,7 @@ nav {
 .middle-links {
 	margin-top: 60px;
 	.container {
+		padding: 0;
 		
 	}
 	.arrows {
@@ -234,6 +235,11 @@ nav {
 		.right-arr {
 			transform: scale(-1);
 			cursor: pointer;
+					transition: transform 100ms linear;
+     &:hover {
+     	transform: scale(-1.2);
+
+     }
 			margin-left: 40px;
 			@media (max-width: 767px) {
 				margin-left: 20px;
@@ -241,6 +247,11 @@ nav {
 		}
 		.left-arr {
 			cursor: pointer;
+			transition: transform 100ms linear;
+     &:hover {
+     	transform: scale(1.2);
+
+     }
 		}
 		@media (max-width: 991px) {
 				padding-top: 10px;
@@ -253,6 +264,7 @@ nav {
 	.middle-links-left {
 		padding-bottom: 30px;
 		height: 70px;
+		z-index: 10;
 		a {
 			color: $color-black;
 			margin-right: 50px;
@@ -413,6 +425,7 @@ nav {
 #carousel-items {
     position: relative;
 	width: 3400px;
+	height: 750px;
 @media (max-width: 991px) {
 	width: 2300px;
 }
@@ -485,8 +498,45 @@ table {
 		color: #fff;
 		@include font-stylez(16px, 300, normal);
 	font-family: 'Clear Sans';
+	@media (max-width: 575px) {
+		font-size: 13px;
 	}
+	}
+}
 
+.carousel-control-next-icon, .carousel-control-prev-icon {
+	opacity: 0;
+}
 
+.car-arr-left {
+	@include position-abs(240px, 55px, null, null);
+	z-index: 5;
+	cursor: pointer;
+	@media (max-width: 991px) {
+		left: 40px;
+	}
+	@media (max-width: 767px) {
+		@include position-abs(160px, 20px, null, null);
+		transform: scale(0.7);
+	}
+	@media (max-width: 575px) {
+		display: none;
+	}
+}
 
+.car-arr-right {
+	@include position-abs(240px, null, 55px, null);
+	z-index: 5;
+	cursor: pointer;
+	transform: scale(-1);
+	@media (max-width: 991px) {
+		right: 40px;
+	}
+	@media (max-width: 767px) {
+		@include position-abs(160px, null, 20px, null);
+		transform: scale(-0.7);
+	}
+	@media (max-width: 575px) {
+		display: none;
+	}
 }
