@@ -1,0 +1,21 @@
+$color-redd: #ef7f1a;
+$color-border: #C7C7C7;
+
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "helgray":    $color-border,
+    "redd":  $color-redd
+  ),
+  $theme-colors
+);
+
+$container-max-widths: (
+  sm: 565px,
+  md: 720px,
+  lg: 1100px,
+  xl: 1700px
+)
+
+

@@ -1,0 +1,492 @@
+@import "vars";
+ * {
+     margin: 0;
+     padding: 0;
+     border-width: 0;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Yanone Kaffeesatz';
+	position: relative;
+}
+
+.container {
+	padding: 0 20px;
+}
+
+
+.header {
+	@include font-stylez(24px, 400, normal);
+	text-transform: uppercase;
+	@media (max-width: 1199px) {
+		font-size: 21px;
+	}
+
+	.row {
+		height: 80px;
+	}
+
+	.header-menu {
+		padding: 0;
+		align-items: center;
+		a {
+			color: $color-black;
+		}
+
+	   .red-plashka {
+	   	position: relative;
+	   	cursor: pointer;
+	   	font-size: 18px;
+	   	background-color: $color-red;
+	   	color: #fff;
+	   	@include box-size(155px, 40px);
+	   	span {
+	   		@include position-abs(8px, 26px, null, null);
+	   	}
+	   	img {
+	   		@include position-abs(12px, null, 25px, null);
+	   	}
+
+	   	@media (max-width: 767px) {
+	   		width: 100px;
+	   	}
+	   	@media (max-width: 575px) {
+	   		transform: scale(0.7);
+	   	}
+
+
+	   }
+	}
+}
+	.news {
+	   		margin-right: 40px;
+	   		@media (max-width: 1199px) {
+	   			margin: 0;
+	   		}
+	   	}
+
+nav {
+	.dis {
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+	a {
+		@media (max-width: 991px) {
+			margin-left: 20px;
+		}
+		@media (max-width: 575px) {
+			margin-left: 10px;
+		}
+	}
+}
+
+.good-girl1, .good-girl2 {
+	text-align: center;
+	height: 540px;
+	padding: 0 0 35px 0;
+	background-size: cover;
+	border-left: 1px #fff solid;
+	border-bottom: 1px #fff solid;
+	p {
+			@include font-stylez(30px, 700, normal);
+			color: #fff;		
+	}
+	@media (max-width: 991px) {
+		height: 400px;
+	}
+	@media (max-width: 767px) {
+		padding-top: 165px;
+		background-origin: content-box;
+	}
+	@media (max-width: 575px) {
+		display: none !important;
+	}
+}
+
+.good-girl2 {
+	@include background-pos(url("../../images/chick2.png"), no-repeat, center);
+}
+.good-girl1 {
+	@include background-pos(url("../../images/chick1.png"), no-repeat, center);
+}
+
+.girls-more {
+	display: none !important;
+	@media (max-width: 1199px) {
+		display: flex !important;
+	}
+	@media (max-width: 575px) {
+		display: none !important;
+	}
+	
+}
+
+
+.item {
+	@include background-pos(url("../../images/chicks.png"), repeat, center);
+	background-size: cover;
+	height: 540px;
+	@media (max-width: 991px) {
+		background-position: 65%;
+	}
+	@media (max-width: 767px) {
+		height: 400px;
+	}
+	@media (max-width: 575px) {
+		height: 250px;
+	}
+}
+
+.slider {
+	padding: 0;
+	position: relative;
+	border-bottom: 1px #fff solid;
+
+	h1 {
+		@include position-abs(250px, 255px, null, null);
+		@include font-stylez(48px, 700, normal);
+		color: #fff;
+		z-index: 2;
+		@media (max-width: 1500px) {
+			left: 140px;
+		}
+		@media (max-width: 1199px) {
+			left: 200px;
+		}
+		@media (max-width: 991px) {
+			font-size: 43px;
+			left: 100px;
+		}
+		@media (max-width: 767px) {
+			font-size: 35px;
+			@include position-abs(180px, 75px, null, null);
+		}
+		@media (max-width: 575px) {
+			display: none;
+		}
+	}
+	button {
+		@include position-abs(null, 260px, null, 110px);
+		@include font-stylez(18px, 400, normal);
+		@include box-size(160px, 45px);
+		border-radius: 0px;
+		border-width: 3px !important;
+		color: #fff;
+		z-index: 2;
+		text-transform: uppercase;
+		@media (max-width: 1500px) {
+			left: 140px;
+		}
+		@media (max-width: 1199px) {
+			left: 200px;
+		}
+		@media (max-width: 991px) {
+			left: 100px;
+		}
+		@media (max-width: 767px) {
+			@include position-abs(null, 75px, null, 70px);
+		}
+		@media (max-width: 575px) {
+			transform: scale(0.9);
+			@include position-abs(null, 75px, null, 30px);
+		}
+	}
+}
+
+		.card-a {
+		font-family: 'Clear Sans';
+		@include font-stylez(16px, 700, normal);
+		color: $color-red !important;
+		cursor: pointer;
+		display: block;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+.goods-bottom {
+	background-color: $color-black;
+	border-top: 1px #fff solid;
+	border-left: 1px #fff solid;
+	color: #fff;
+	height: 100px;
+	cursor: pointer;
+	img {
+		margin-top: 7px;
+	}
+	p {
+		@include font-stylez(24px, 400, normal);
+	}
+}
+
+.middle-links {
+	margin-top: 60px;
+	.container {
+		
+	}
+	.arrows {
+		padding-top: 20px;
+		.right-arr {
+			transform: scale(-1);
+			cursor: pointer;
+			margin-left: 40px;
+			@media (max-width: 767px) {
+				margin-left: 20px;
+			}
+		}
+		.left-arr {
+			cursor: pointer;
+		}
+		@media (max-width: 991px) {
+				padding-top: 10px;
+			}
+			@media (max-width: 575px) {
+				display: none !important;
+			}
+	}
+
+	.middle-links-left {
+		padding-bottom: 30px;
+		height: 70px;
+		a {
+			color: $color-black;
+			margin-right: 50px;
+			@include font-stylez(36px, 400, normal);
+			&:hover {
+				color: $color-red;
+			}
+			@media (max-width: 991px) {
+				font-size: 25px;
+			}
+			@media (max-width: 767px) {
+				font-size: 22px;
+				margin-right: 20px;
+			}
+
+		}
+		@media (max-width: 575px) {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.best-item {
+	position: relative;
+	width: 400px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 10px;
+	.dark-card {
+		position: relative;
+     opacity: 0;
+     z-index: 2;
+     @include position-abs(0px, 0px, 0px, 0px);
+     height: 700px;
+     background-color: #333333;
+     transition: transform 300ms linear;
+     &:hover {
+     	transform: scaleX(1.1) scaleY(1.05);
+
+     }
+}
+@media (max-width: 991px) {
+	margin: 10px;
+}
+@media (max-width: 575px) {
+	transform: scale(0.77);
+	margin: 0;
+}
+@media (max-width: 450px) {
+	transform: scale(0.6);
+}
+
+
+}
+
+.best-item-info {
+	position: relative;
+	z-index: 3;
+	@include box-size(400px, 170px);
+
+	.best-head {
+	@include font-stylez(24px, 400, normal);
+	@include position-abs(20px, 0px, null, null);
+}
+
+.best-about {
+	font-family: 'Clear Sans';
+	@include font-stylez(16px, 300, normal);
+	@include position-abs(58px, 0px, null, null);
+}
+
+.size1 {
+	@include position-abs(120px, 0px, null, null);
+}
+.size2 {
+	@include position-abs(120px, 50px, null, null);
+}
+.size3 {
+	@include position-abs(120px, 100px, null, null);
+}
+.size-word {
+		@include font-stylez(18px, 400, normal);
+		@include position-abs(150px, 0px, null, null);
+	}
+
+	.price-del {
+		@include font-stylez(24px, 300, normal);
+		text-decoration: line-through;
+		color: $color-gray;
+		@include position-abs(97px, 270px, null, null);
+	}
+
+	.price {
+		@include font-stylez(36px, 700, normal);
+		margin-right: 20px;
+		@include position-abs(122px, 270px, null, null);
+	}
+
+	.basket {
+		cursor: pointer;
+		@include position-abs(120px, 350px, null, null);
+	}
+
+
+
+
+
+}
+
+
+.best-item-pic {
+	position: relative;
+	.flag {
+		@include position-abs(50px, 18px, null, null);
+		z-index: 2;
+	}
+}
+
+
+	
+
+
+
+.choose-best {
+	margin-bottom: 100px;
+	.container {
+		@media (max-width: 575px) {
+			margin: 0;
+		padding: 0;
+		}
+		
+	}
+}
+
+#menu-sm {
+	display: none;
+	@media (max-width: 991px) {
+		display: inline;
+	}
+}
+
+#katalog {
+	@media (max-width: 991px) {
+		display: none;
+	}
+}
+
+.logo-sm {
+	img {
+			@media (max-width: 575px) {
+	height: 25px;
+	transform: translateX(10px);	
+	}
+	}
+}
+
+
+#carousel-items {
+    position: relative;
+	width: 3400px;
+@media (max-width: 991px) {
+	width: 2300px;
+}
+@media (max-width: 575px) {
+	margin: 0;
+	padding: 0;
+}
+}
+
+table {
+	@include position-abs(190px, 30px, null, null);
+	color: white;
+	border-collapse: collapse;
+	font-family: 'Clear Sans';
+	@include font-stylez(15px, 300, normal);
+	border: 1px #FFF solid;
+	td {
+		border: 1px #fff solid;
+		padding-left: 7px;
+		padding-right: 10px;
+		color: #989898;
+	}
+	.pad {
+		padding: 4px 10px 4px 90px;
+		text-align: right;
+		color: white;
+	}
+}
+
+.go {
+	@include position-abs(410px, 130px, null, null);
+	@include font-stylez(16px, 700, normal);
+	font-family: 'Clear Sans';
+	color: $color-red;
+	&:hover {
+		color: white;
+	}
+}
+
+.wrapper {
+	overflow: hidden;
+	margin: auto;
+	padding: 20px 0;
+	@include box-size(100%, 750px);
+	@media (max-width: 1199px) {
+		width: 840px;
+	}
+	@media (max-width: 991px) {
+		width: 420px;
+	}
+
+	@media (max-width: 575px) {
+		transform: translateY(-100px);
+	}
+
+	@media (max-width: 400px) {
+		transform: translate(-30px, -100px);
+	}
+
+
+}
+
+
+.hide-menu {
+	@include position-abs(-80px, 0px, null, null);
+	@include box-size(100%, 80px);
+	background-color: black;
+	z-index: 10;
+	a {
+		color: #fff;
+		@include font-stylez(16px, 300, normal);
+	font-family: 'Clear Sans';
+	}
+
+
+
+}

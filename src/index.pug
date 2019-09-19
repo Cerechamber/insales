@@ -1,0 +1,99 @@
+include includes/_mixins.pug
+doctype html
+html(lang="ru")
+	head
+		title inSales
+		meta(http-equiv="Content-type" content="text/html; charset=utf-8")
+		meta(name="description" content="Описание страницы")
+		meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+	body
+		.hide-menu(class=['d-flex', 'justify-content-around', 'align-items-center'])
+			a(href="#") Компания
+			a(href="#") Новости
+			a(href="#") Поставщикам
+			a(href="#") Контакты
+			a(href="#") Кабинет
+		header(class="header")
+			.container
+				.row(class=['justify-content-between', 'align-items-center'])
+					nav(class=['header-menu', 'col-4', 'd-flex', 'justify-content-between'])
+						.red-plashka
+							span(id="katalog") Каталог
+							span(id="menu-sm") Меню
+							img(src="../images/arrow.svg" alt="arrow")
+						a(href="#" class="dis") Компания
+						a(href="#" class=['news', 'dis']) Новости
+
+					nav(class=['header-menu', 'col-4', 'd-flex', 'justify-content-center'])
+						+a-img("logo.png")(class="logo-sm")
+
+					nav(class=['header-menu', 'col-4', 'd-flex', 'justify-content-end', 'justify-content-lg-between'])
+						a(href="#" class="dis") Поставщикам
+						a(href="#" class="dis") Контакты
+						a(href="#" class="dis") Кабинет
+						+a-img("lupa.svg")
+						+a-img("telega.svg")
+		main.goods
+			.container
+				.row(class="goods-chicks")
+					.slider(class=['col-lg-12', 'col-xl-8'])
+						h1 Monoteka-group — лучшие моменты<br> жизни вместе с нашими платьями
+						button(class=['btn', 'btn-redd', 'btn-lg', 'border', 'border-white']) Купить
+
+						#carouselExampleControls(class="carousel slide" data-ride="carousel")
+							.carousel-inner
+								.carousel-item(class="active")
+									div(class=['d-block', 'item'])
+								.carousel-item
+									div(class=['d-block', 'item'])
+							a(class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev")
+								span(class="carousel-control-prev-icon" aria-hidden="true")
+								span(class="sr-only") Previous
+							a(class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next")
+								span(class="carousel-control-next-icon" aria-hidden="true")
+								span(class="sr-only") Next
+					.good-girl1(class=['d-flex', 'flex-column', 'justify-content-end', 'col-xl-2', 'col-md-3', 'col-6'])
+								+forCard("Пиджаки", "в наших магазинах")
+
+					.good-girl2(class=['d-flex', 'flex-column', 'justify-content-end','col-xl-2', 'col-md-3', 'col-6'])
+								+forCard("Деловой стиль", "узнать больше")
+
+					.good-girl1(class=['d-flex', 'flex-column', 'justify-content-end', 'col-xl-2', 'col-6', 'col-md-3', 'col-lg-3', 'girls-more'])
+								+forCard("Пиджаки", "в наших магазинах")
+
+					.good-girl2(class=['d-flex', 'flex-column', 'justify-content-end','col-xl-2', 'col-6', 'col-md-3', 'col-lg-3', 'girls-more'])
+								+forCard("Деловой стиль", "узнать больше")
+
+
+				.row
+					+goods("g1", "платья")
+					+goods("g2", "шубы")
+					+goods("g3", "пиджаки")
+					+goods("g4", "блузки")
+					+goods("g5", "джинсы")
+					+goods("g6", "рубашки")
+
+		section(class=['middle-links'])
+			.container
+				.row
+					.middle-links-left(class=['d-flex', 'justify-content-between', 'justify-content-sm-start', 'align-items-start','col-11'])
+						a(href="#") Лучшие предложения недели
+						a(href="#") Новинки
+						a(href="#") Рекомендуем
+					.arrows(class=['d-flex', 'justify-content-end', 'align-items-start', 'col-1'])
+						img(src="../images/blackarr.svg" class="left-arr")
+						img(src="../images/blackarr.svg" class="right-arr")
+
+		section(class="choose-best")
+			.container
+				.wrapper
+					#carousel-items
+						+best("best1.png", "flag2.png", "Кожаная юбка")
+						+best("best2.png", "flag1.png", "Платье в горох с поясом")
+						+best("best4.png", "flag2.png", "Розовое платье")
+						+best("best3.png", "flag2.png", "Полосатая кофта")
+						+best("best1.png", "flag2.png", "Железная юбка")
+						+best("best2.png", "flag1.png", "Прозрачное платье с поясом")
+						+best("best4.png", "flag2.png", "Купальники")
+						+best("best3.png", "flag2.png", "Женщинам лучше без одежды")

@@ -1,0 +1,86 @@
+$color-red: #ef7f1a;
+$color-black: #000000;
+$color-gray: #bbbbbb;
+
+
+@mixin tel($url, $padding) {
+	background-image: $url;
+	background-repeat: no-repeat;
+	padding-left: $padding;
+	margin-top: 4px;
+}
+
+@mixin id-headers($width, $height) {
+	margin-top: 33px;
+	width: $width;
+	height: $height;
+	position: relative;
+}
+
+@mixin position-abs($top, $left, $right, $bottom) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	right: $right;
+	bottom: $bottom;
+}
+
+@mixin font-stylez($size, $weight, $style) {
+	font-size: $size;
+	font-weight: $weight;
+	font-style: $style;
+}
+
+@mixin box-size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin background-pos($image, $repeat, $pos) {
+	background-image: $image;
+	background-repeat: $repeat;
+	background-position: $pos;
+}
+
+@mixin font-declaration($style, $weight, $url, $url1, $url2, $url3, $url4, $url5, $url6, $url7) {
+	font-family: 'Roboto';
+  font-style: $style;
+  font-weight: $weight;
+  src: $url; /* IE9 Compat Modes */
+  src: $url1, $url2, $url3, $url4, $url5 $url6, $url7;
+}
+
+@mixin button-style($radius, $text, $padheight, $padwidth, $color, $bcolor, $border-color) {
+	border-radius: $radius;
+	cursor: pointer;
+	outline-width: 0;
+	text-transform: $text;
+	padding: $padheight $padwidth;
+	color: $color;
+	background-color: $bcolor;
+	border-bottom: 4px $border-color solid;
+}
+
+
+@mixin icons-style($img, $h, $p-l, $tr) {
+	    @include background-pos(url($img), no-repeat, left);
+		height: $h;
+		padding-left: $p-l;
+		cursor: pointer;
+		 p {
+		 	transform: translateY($tr);
+		 	@include font-stylez(14px, 500, normal);
+		 }
+}
+
+@mixin meet-blocks($url) {
+	height: 62px;
+	@include background-pos(url($url), no-repeat, left);
+	padding-left: 79px;
+}
+
+@mixin marpad($mar, $pad) {
+	margin: $mar;
+	padding: $pad;
+}
+
