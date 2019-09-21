@@ -62,6 +62,7 @@ export default $(function() {
 
     var slider,
         oBxSettings = {
+            auto: true,
             pager: false,
             nextText: '',
             prevText: '',
@@ -96,6 +97,7 @@ export default $(function() {
     $(window).resize(function() {
         if (window.outerWidth >= 1200) {
             slider.reloadSlider({
+                auto: true,
                 pager: false,
                 nextText: '',
                 prevText: '',
