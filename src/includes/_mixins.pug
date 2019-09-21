@@ -8,14 +8,14 @@ mixin forCard(content, content2)
 
 mixin goods(good, word)
 	.goods-bottom(class=['col-4', 'col-sm-2', 'd-flex', 'flex-column', 'justify-content-center', 'align-items-center'])
-		img(src="../images/" + good + ".svg")
+		img(alt="alt" src="../images/" + good + ".svg")
 		p #{word}
 
 mixin best(img1, img2, product)
 	.best-item
 		.dark-card
-			table(border="1")
-				tr(cellpadding="10")
+			table
+				tr
 					td Материал
 					td(class="pad") Хлопок
 				tr
@@ -29,15 +29,15 @@ mixin best(img1, img2, product)
 					td(class="pad") Мини
 			a(href="#" class="go") Перейти в карточку
 		.best-item-pic
-			img(src="../images/" + img1)
-			img(src="../images/" + img2 class="flag")
+			img(alt="alt" src="../images/" + img1)
+			img(alt="alt" src="../images/" + img2 class="flag")
 		.best-item-info
 			h2(class="best-head") #{product}
 			p(class="best-about") Описание: Полосатая кофта из полосатого трикотажа, без молнии
-			img(src="../images/size1.svg" class="size1")
-			img(src="../images/size2.svg" class="size2")
-			img(src="../images/size3.svg" class="size3")
+			img(alt="alt" src="../images/size1.svg" class="size1")
+			img(alt="alt" src="../images/size2.svg" class="size2")
+			img(alt="alt" src="../images/size3.svg" class="size3")
 			p(class="size-word") Размер
 			p(class="price-del") 1190 р.
 			p(class="price") 790 р.
-			img(src="../images/telega1.svg" class="basket")
+			img(alt="alt" src="../images/telega1.svg" class="basket")

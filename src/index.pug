@@ -21,7 +21,7 @@ html(lang="ru")
 						.red-plashka
 							span(id="katalog") Каталог
 							span(id="menu-sm") Меню
-							img(src="../images/arrow.svg" alt="arrow")
+							img(alt="alt" src="../images/arrow.svg")
 						a(href="#" class="dis") Компания
 						a(href="#" class=['news', 'dis']) Новости
 
@@ -40,8 +40,8 @@ html(lang="ru")
 					.slider(class=['col-lg-12', 'col-xl-8'])
 						h1 Monoteka-group — лучшие моменты<br> жизни вместе с нашими платьями
 						button(class=['btn', 'btn-redd', 'btn-lg', 'border', 'border-white']) Купить
-						img(src="../images/car-arr.png" class="car-arr-left")
-						img(src="../images/car-arr.png" class="car-arr-right")
+						img(alt="alt" src="../images/car-arr.png" class="car-arr-left")
+						img(alt="alt" src="../images/car-arr.png" class="car-arr-right")
 
 						#carouselExampleControls(class="carousel slide" data-ride="carousel")
 							.carousel-inner
@@ -84,18 +84,17 @@ html(lang="ru")
 						a(href="#") Новинки
 						a(href="#") Рекомендуем
 					.arrows(class=['d-flex', 'justify-content-end', 'align-items-start', 'col-1'])
-						img(src="../images/blackarr.svg" class="left-arr")
-						img(src="../images/blackarr.svg" class="right-arr")
+						img(alt="alt" src="../images/blackarr.svg" class="left-arr")
+						img(alt="alt" src="../images/blackarr.svg" class="right-arr")
 
 		section(class="choose-best")
 			.container
-				.wrapper
-					#carousel-items
-						+best("best1.png", "flag2.png", "Кожаная юбка")
-						+best("best2.png", "flag1.png", "Платье в горох с поясом")
-						+best("best4.png", "flag2.png", "Розовое платье")
-						+best("best3.png", "flag2.png", "Полосатая кофта")
-						+best("best1.png", "flag2.png", "Железная юбка")
-						+best("best2.png", "flag1.png", "Прозрачное платье с поясом")
-						+best("best4.png", "flag2.png", "Купальники")
-						+best("best3.png", "flag2.png", "Женщинам лучше без одежды")
+				.bxslider
+					+best("best1.png", "flag2.png", "Кожаная юбка")
+					+best("best2.png", "flag1.png", "Платье в горох с поясом")
+					+best("best4.png", "flag2.png", "Розовое платье")
+					+best("best3.png", "flag2.png", "Полосатая кофта")
+					+best("best1.png", "flag2.png", "Железная юбка")
+					+best("best2.png", "flag1.png", "Прозрачное платье с поясом")
+					+best("best4.png", "flag2.png", "Купальники")
+					+best("best3.png", "flag2.png", "Женщинам лучше без одежды")

@@ -104,10 +104,7 @@ const config = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
-    }),
-      new webpack.ProvidePlugin({
-        'jquery-touchswipe': 'jquery.touchSwipe.min.js'
-      })
+    })
   ],
   devServer: {
     contentBase: distPath,
