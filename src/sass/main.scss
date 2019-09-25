@@ -398,14 +398,32 @@ nav {
 
     .size1 {
         @include position-abs(120px, 0px, null, null);
+        @include box-size(47px, 20px);
+        @include background-pos(url("../../images/size1.svg"), no-repeat, center);
+        @include font-stylez(18px, 700, normal);
+        text-align: center;
+        padding-bottom: 27px;
+        color: $color-red;
     }
 
     .size2 {
         @include position-abs(120px, 50px, null, null);
+        @include box-size(47px, 20px);
+        @include background-pos(url("../../images/size2.svg"), no-repeat, center);
+        color: $color-gray;
+        @include font-stylez(18px, 700, normal);
+        text-align: center;
+        padding-bottom: 27px;
     }
 
     .size3 {
         @include position-abs(120px, 100px, null, null);
+        @include box-size(47px, 20px);
+        @include background-pos(url("../../images/size2.svg"), no-repeat, center);
+        color: $color-gray;
+        @include font-stylez(18px, 700, normal);
+        text-align: center;
+        padding-bottom: 27px;
     }
 
     .size-word {
@@ -413,48 +431,55 @@ nav {
         @include position-abs(150px, 0px, null, null);
     }
 
+    .price-container {
+        @include position-abs(100px, 250px, null, null);
+        @include box-size(100px, 60px);
+        line-height: 30px;
+        @media (max-width: 1199px) {
+            @include position-abs(100px, 240px, null, null);
+        }
+        @media (max-width: 1199px) {
+            @include position-abs(100px, 220px, null, null);
+        }
+        @media (max-width: 370px) {
+            @include position-abs(110px, 220px, null, null);
+        }
+          @media (max-width: 355px) {
+            @include position-abs(110px, 180px, null, null);
+        }
+
+
+    }
+
     .price-del {
+        width: 100%;
         @include font-stylez(24px, 300, normal);
         text-decoration: line-through;
         color: $color-gray;
-        @include position-abs(97px, 270px, null, null);
-
-        @media (max-width: 991px) {
-            left: 260px;
-        }
 
         @media (max-width: 767px) {
             @include font-stylez(20px, 300, normal);
-            left: 255px;
-        }
-
-        @media (max-width: 370px) {
-            @include position-abs(115px, 210px, null, null);
         }
     }
 
     .price {
+        width: 100%;
         @include font-stylez(36px, 700, normal);
-        margin-right: 20px;
-        @include position-abs(122px, 270px, null, null);
-
-        @media (max-width: 991px) {
-            left: 260px;
-        }
 
         @media (max-width: 767px) {
             @include font-stylez(33px, 700, normal);
-            left: 255px;
         }
 
         @media (max-width: 370px) {
-            @include position-abs(135px, 210px, null, null);
         }
     }
 
     .basket {
         cursor: pointer;
         @include position-abs(120px, 350px, null, null);
+        @media (max-width: 1199px) {
+            left: 335px;
+        }
 
         @media (max-width: 991px) {
             left: 330px;
@@ -464,8 +489,11 @@ nav {
             left: 315px;
         }
 
-        @media (max-width: 370px) {
-            @include position-abs(140px, 270px, null, null);
+       @media (max-width: 370px) {
+            @include position-abs(130px, 310px, null, null);
+        }
+        @media (max-width: 355px) {
+            @include position-abs(130px, 270px, null, null);
         }
     }
 
@@ -553,6 +581,13 @@ table {
         @include position-abs(160px, 13px, null, null);
 
     }
+    @media (max-width: 350px) {
+        transform: scale(0.8);
+        @include font-stylez(14px, 300, normal);
+        @include position-abs(140px, 0px, null, null);
+        margin-left: -15px;
+
+    }
 }
 
 .go {
@@ -560,18 +595,14 @@ table {
     @include font-stylez(16px, 700, normal);
     font-family: 'Clear Sans';
     color: $color-red;
+    z-index: 100;
 
     &:hover {
         color: white;
     }
 
-    @media (max-width: 1199px) {
-        left: 117px;
-    }
-
-    @media (max-width: 767px) {
-        @include position-abs(360px, 100px, null, null);
-
+    @media (max-width: 1370px) {
+        display: none;
     }
 }
 
@@ -655,4 +686,35 @@ table {
 .bx-prev,
 .bx-next {
     display: none;
+}
+
+.mini {
+    display: none;
+    @include position-abs(410px, 130px, null, null);
+    @include font-stylez(16px, 700, normal);
+    font-family: 'Clear Sans';
+    color: $color-red;
+    z-index: 100;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+
+    &:hover {
+        color: white;
+        text-decoration: none;
+    }
+    @media (max-width: 1370px) {
+        display: block;
+    }
+    @media (max-width: 1199px) {
+        left: 117px;
+    }
+
+    @media (max-width: 767px) {
+        @include position-abs(360px, 100px, null, null);
+
+    }
+     @media (max-width: 350px) {
+        @include position-abs(330px, 70px, null, null);
+
+    }
 }

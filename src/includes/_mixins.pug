@@ -13,6 +13,7 @@ mixin goods(good, word)
 
 mixin best(img1, img2, product)
 	.best-item
+		a(href="#" class="mini") Перейти в карточку
 		.dark-card
 			table
 				tr
@@ -34,10 +35,11 @@ mixin best(img1, img2, product)
 		.best-item-info
 			h2(class="best-head") #{product}
 			p(class="best-about") Описание: Полосатая кофта из полосатого трикотажа, без молнии
-			img(alt="alt" src="../images/size1.svg" class="size1")
-			img(alt="alt" src="../images/size2.svg" class="size2")
-			img(alt="alt" src="../images/size3.svg" class="size3")
+			.size1 44
+			.size2 48
+			.size3 52
 			p(class="size-word") Размер
-			p(class="price-del") 1190 р.
-			p(class="price") 790 р.
+			.price-container(class=['d-flex', 'align-content-center', 'flex-wrap'])
+				p(class="price-del") 11900 р.
+				p(class="price") 1170 р.
 			img(alt="alt" src="../images/telega1.svg" class="basket")

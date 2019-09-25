@@ -1,5 +1,17 @@
 export default $(function() {
 
+    if (!$('.size3').text()) {
+   $('.size3').hide();
+} else {
+    $(this).show();
+}
+
+    if (!$('.size2').text()) {
+   $('.size2').hide();
+} else {
+    $(this).show();
+}
+
     $('.best-item').on('mouseenter', function(ev) {
         $(ev.target).parents('.best-item').find('.dark-card').css({
             transform: 'scaleX(1.05) scaleY(1.04)'
@@ -20,6 +32,31 @@ export default $(function() {
         $(ev.target).parents('.best-item').find('.best-head, .best-about, .size-word, .price').css('color', '#000000');
 
     });
+
+     $(document).on('touchstart', function(ev) {
+        if ($(ev.target).parents('.best-item')) {
+             $(ev.target).parents('.best-item').find('.dark-card').css({
+            transform: 'scaleX(1.05) scaleY(1.04)'
+        }).animate({
+            'opacity': "0.8"
+        }, 300);
+        $(ev.target).parents('.best-item').find('.best-head, .best-about, .size-word, .price').css('color', 'white');
+        }
+        
+    });
+
+
+        $(document).on('touchend', function(ev) {
+            if ($(ev.target).parents('.best-item')) {
+            $(ev.target).parents('.best-item').find('.dark-card').css({
+            transform: 'scale(1)'
+        }).animate({
+            opacity: "0"
+        }, 300);
+        $(ev.target).parents('.best-item').find('.best-head, .best-about, .size-word, .price').css('color', '#000000');
+        }
+        });
+
 
 
     $('.red-plashka').click(function() {
@@ -58,17 +95,21 @@ export default $(function() {
 
     });
 
+     $('.go, .mini').on('click', function() {
+        var url = $(this).attr('href');
+        location.href=url;
+    });
+
 
 
     var slider,
         oBxSettings = {
-            auto: true,
             pager: false,
             nextText: '',
             prevText: '',
             maxSlides: 4,
             moveSlides: 2,
-            slideWidth: 420
+            slideWidth: 420,
         };
 
     function init() {
@@ -97,7 +138,6 @@ export default $(function() {
     $(window).resize(function() {
         if (window.outerWidth >= 1200) {
             slider.reloadSlider({
-                auto: true,
                 pager: false,
                 nextText: '',
                 prevText: '',
@@ -116,6 +156,20 @@ export default $(function() {
             slider.reloadSlider(oBxSettings);
         }
     });
+
+
+$('.bxslider').swipe({
+ swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+ if (direction == 'up') {
+    var qq = $('.bxslider').offset().top + distance / 2;
+ $('body,html').animate({scrollTop: qq}, 500);
+ }
+  else if (direction == 'down') {
+    var qq = $('.bxslider').offset().top - distance / 2;
+    $('body,html').animate({scrollTop: qq}, 500);
+  }
+ }
+});
 
 
 });
